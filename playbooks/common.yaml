@@ -22,7 +22,7 @@
       state: latest
   - name: configure ntp
     template:
-      src: /ansible/templates/ntp.conf.j2
+      src: /Ansible/templates/ntp.conf.j2
       dest: /etc/ntp.conf
     notify: restart ntpd
   - name: start ntpd
@@ -38,7 +38,7 @@
   tasks:
   - name: manage resolv.conf
     template:
-      src: /ansible/templates/resolv.conf.j2
+      src: /Ansible/templates/resolv.conf.j2
       dest: /etc/resolv.conf
   - name: remove Network Manager
     yum:
